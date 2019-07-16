@@ -1,0 +1,50 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resetBtn {
+  background-color: none;
+  border-radius: 7px;
+  cursor: pointer;
+  color: rgb(255, 37, 37);
+  font-size: 1rem;
+  padding: 8px 15px;
+  outline: none;
+  border: 1px solid rgb(255, 37, 37);
+  align-self: flex-start;
+}
+.resetBtn:hover {
+  filter: brightness(105%);
+}
+
+.buyBtn {
+  background-color: #52cf8a;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 8px 15px;
+  outline: none;
+  border: none;
+  align-self: flex-end;
+}
+.buyBtn:hover {
+  filter: brightness(105%);
+}
+.message {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 40%;
+  border-radius: 30px;
+  padding: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.success {
+  background: #28a745;
+}
+.info {
+  background: #17a2b8;
+}

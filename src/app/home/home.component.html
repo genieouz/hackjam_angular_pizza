@@ -1,0 +1,51 @@
+<div class="home-header">
+  <h3>{{ "pizza_ordered" | translate }} : {{ counter }}</h3>
+  <div class="buttons">
+    <button class="resetBtn" (click)="resetAll()">
+      {{ "reset" | translate }}
+    </button>
+    <button class="buyBtn" (click)="buyNow()">
+      {{ "buy_now" | translate }}
+    </button>
+  </div>
+</div>
+<app-pizzalist (isAdded)="updateList($event)"></app-pizzalist>
+
+<ng-container *ngIf="message && message.type">
+  <div class="message {{ message.type }}">
+    {{ message.content | translate }}
+  </div>
+</ng-container>
+<ng-template #testModal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      {{ "your_order" | translate }}
+    </h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.hide(); showMessage('cancelled_purchase', 'info')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="test" *ngFor="let pizza of pizzas">
+      <p *ngIf="pizza.numberOrdered > 0">
+        {{ pizza.name }} x {{ pizza.numberOrdered }}
+      </p>
+    </div>
+    Total : {{ totalPrice }}
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.hide(); showMessage('successful_purchase', 'success')"
+    >
+      {{ "confirm" | translate }}
+    </button>
+  </div>
+</ng-template>

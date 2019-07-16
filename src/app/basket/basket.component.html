@@ -1,0 +1,9 @@
+<div class="userBasketDiv">
+  {{ "basket" | translate }}
+  <div class="basketPrice">
+    {{ amount | currency: "EUR":"symbol":"1.2-2" }}
+    <span *ngIf="amount > 200">
+      {{ "price_limit_exceeded" | translate }} !</span
+    >
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "buy_now": "Acheter maintenant",
+  "reset": "Réinitialiser",
+  "pizza_ordered": "Pizza commandée",
+  "pizza_store": "RESTAURANT DE PIZZA",
+  "basket": "Panier",
+  "price_limit_exceeded": "Limite de prix dépassée",
+  "your_order": "Votre Commande.",
+  "confirm": "Confirmer",
+  "cancelled_purchase": "Achat annulé",
+  "successful_purchase": "Achat effectué avec succès"
+}

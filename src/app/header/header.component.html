@@ -1,0 +1,10 @@
+<div class="headerDiv">
+  <h1>{{ "pizza_store" | translate }}</h1>
+  <form>
+    <select [(ngModel)]="lang" (change)="changeLang()" name="lang">
+      <option value="fr">FRANCAIS</option>
+      <option value="en">ENGLISH</option>
+    </select>
+  </form>
+  <app-basket></app-basket>
+</div>
